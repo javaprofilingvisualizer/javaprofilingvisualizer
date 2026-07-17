@@ -30,7 +30,7 @@ java -agentpath:libasyncProfiler.so=start,event=wall,file=v${TAG}.jfr \
 **`T` acquisition:** total elapsed time divided by the operation count `N_OPS`. The workload must therefore be **fixed-load** (a known number of operations), not fixed-duration.
 
 
-### Running application
+## Running application
 
 async-profiler can also attach to an already-running JVM by PID, using the `asprof` launcher:
 
