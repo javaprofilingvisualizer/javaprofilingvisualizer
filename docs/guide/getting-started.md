@@ -12,9 +12,6 @@ This page walks you through a first run.
 | Maven | 3.8+ | Building profile project |
 | GNU Make | — | Automating the workflow |
 
-::: tip Kernel settings
-With `event=wall` (the default, see [Profiling Modes](/methodology/profiling-modes)) no special kernel permissions are needed — one of the reasons wall-clock sampling was chosen. `event=cpu` via `perf_events` may require lowering `perf_event_paranoid`.
-:::
 
 ## 1. Profiling with async-profiler
 
@@ -37,7 +34,7 @@ asprof start -e wall -f profile.jfr <pid>
 asprof stop <pid>                        
 ```
 
-Since attach mode records a time window rather than a complete execution, drive a **fixed, known load** during the window and compute `T = elapsed / N` to keep the [τ formula](/methodology/temporal-weighting) valid.
+Since attach mode records a time window rather than a complete execution, drive a **fixed, known load** during the window and compute `T = elapsed / N` to keep the [time formula](/methodology/temporal-weighting) for the streamgraph valid.
 
 ## 2. Parse and visualize
 
@@ -67,6 +64,6 @@ npx tsx src/main.ts v1.json v2.json v3.json -o stream.json --html stream.html
 
 ## 3. Read the results
 
-- **Treemap** — rectangle area ≈ cost share; click to zoom into a package. See [Treemap](/profile/treemap).
+- **Treemap** — rectangle area ≈ cost share. See [Treemap](/profile/treemap).
 - **Sankey** — left-to-right flow of samples through call frames. See [Sankey Diagram](/profile/sankey).
 - **Streamgraph** — one band per class. See [Streamgraph](/differential/streamgraph).

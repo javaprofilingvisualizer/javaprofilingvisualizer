@@ -2,7 +2,12 @@
 
 The Sankey diagram shows **how cost flows through call paths**: nodes are stack frames, links carry samples from caller to callee, and link width is proportional to sample volume. Where the treemap answers *which* components are expensive, the Sankey answers *through which paths* they are reached.
 
-Built on **D3 Sankey v7** as a self-contained HTML template.
+<figure class="jpv-figure">
+  <img src="/sankey-illustration.png" alt="Sankey diagram: frames as nodes with left-to-right flow ribbons" />
+  <figcaption><span class="jpv-fig-label">Figure — Sankey.</span> Samples flow left to right along caller → callee edges; ribbon width tracks sample volume. </figcaption>
+</figure>
+
+Built on **D3 v7** as a self-contained HTML template.
 
 ## The cycle problem {#cycles}
 

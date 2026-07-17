@@ -1,4 +1,4 @@
-# Structural Tree Matching
+# Similarity-based Flexible Tree Matching
 
 Matching two call trees proceeds in **three stages**: textual similarity, topological propagation, and stochastic assignment.
 

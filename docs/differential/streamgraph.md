@@ -2,7 +2,12 @@
 
 The streamgraph represents the differential view: **one band per class** (or package, or method), the horizontal axis is the version sequence, and band thickness at each version is that entity's cost. Widening bands are regressions, while narrowing bands are improvements. 
 
-Built with **D3.js v7**, self-contained HTML with `__DATA__` injection.
+<figure class="jpv-figure">
+  <img src="/streamgraph-illustration.png" alt="Streamgraph: stacked silhouette bands across versions" />
+  <figcaption><span class="jpv-fig-label">Figure — Streamgraph.</span> Each band is one class tracked across versions. Band thickness is its cost : widening signals a regression, narrowing an improvement.</figcaption>
+</figure>
+
+Built on **D3 v7** as a self-contained HTML template.
 
 ## Two units: Time vs Samples
 
@@ -10,7 +15,7 @@ A toggle switches the vertical unit:
 
 | Mode | Value shown | Valid comparison |
 |---|---|---|
-| **Time** | $\tau = \frac{s}{N}\times T$ — ms per operation | **across versions** ✓ |
+| **Time** | $\tau = \frac{s}{N}\times T$ — ms per operation | **across versions** |
 | **Samples** | raw sample proportions | within one version only |
 
  Raw samples are proxies for proportions *within* a version only; comparing them across versions is meaningless when total run time differs. Full derivation: [Temporal Weighting](/methodology/temporal-weighting).

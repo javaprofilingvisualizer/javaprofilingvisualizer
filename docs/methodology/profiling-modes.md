@@ -1,6 +1,6 @@
 # Profiling Modes
 
-JPV supports two acquisition modes, unified by the same intermediate JSON schema and the same [τ formula](/methodology/temporal-weighting).
+JPV supports two acquisition modes, unified by the same intermediate JSON schema and the same [time formula](/methodology/temporal-weighting).
 
 ## JMH mode
 

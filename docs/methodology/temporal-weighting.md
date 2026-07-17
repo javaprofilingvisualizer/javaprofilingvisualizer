@@ -1,6 +1,6 @@
 # Temporal Weighting
 
-**Raw sample counts cannot be compared across versions**. This page explains the failure, the fix, and the formula.
+**Raw sample counts cannot be compared across versions**. This page explains why.
 
 ## The flat streamgraph problem {#the-flat-streamgraph-problem}
 
